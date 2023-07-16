@@ -2,7 +2,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import ru.netology.stats.StatsService;
 
-import java.util.ArrayList;
 
 public class StatsServiceTest {
 
@@ -46,22 +45,17 @@ public class StatsServiceTest {
     @Test
     public void testLowestAvgList() {
         int[] arr = {1, 2, 3, 4, 5};
-        ArrayList<Integer> result = StatsService.lowestAvgList(arr, 3);
-        ArrayList<Integer> expected = new ArrayList<>();
-        expected.add(1);
-        expected.add(2);
-
-        Assertions.assertEquals(expected, result);
+        int[] result = StatsService.lowestAvgList(arr, 3);
+        int[] expected = {1, 2};
+        Assertions.assertArrayEquals(expected, result);
     }
 
     @Test
     public void testHighestAvgList() {
         int[] arr = {1, 2, 3, 4, 5};
-        ArrayList<Integer> result = StatsService.highestAvgList(arr, 3);
-        ArrayList<Integer> expected = new ArrayList<>();
-        expected.add(4);
-        expected.add(5);
+        int[] result = StatsService.highestAvgList(arr, 3);
+        int[] expected = {4, 5};
 
-        Assertions.assertEquals(expected, result);
+        Assertions.assertArrayEquals(expected, result);
     }
 }

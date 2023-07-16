@@ -1,6 +1,6 @@
 package ru.netology.stats;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,10 +18,10 @@ public class Main {
         int lowest = StatsService.lowest(sales);
         System.out.println(lowest);
 
-        ArrayList<Integer> lowestAvgList = StatsService.lowestAvgList(sales, avg);
-        System.out.println(lowestAvgList);
+        int[] lowestAvgList = StatsService.lowestAvgList(sales, avg);
+        System.out.println(Arrays.toString(lowestAvgList));
 
-        ArrayList<Integer> highestAvgList = StatsService.highestAvgList(sales, avg);
-        System.out.println(highestAvgList);
+        int[] highestAvgList = StatsService.highestAvgList(sales, avg);
+        System.out.println(Arrays.toString(highestAvgList));
     }
 }

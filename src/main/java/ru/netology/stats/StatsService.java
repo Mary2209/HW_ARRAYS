@@ -40,22 +40,38 @@ public class StatsService {
     }
 
     //    количество месяцев, в которых продажи были ниже среднего (см. п.2);
-    public static ArrayList<Integer> lowestAvgList(int[] arr, int avg) {
-        ArrayList<Integer> res = new ArrayList<>();
+    //    количество месяцев, в которых продажи были выше среднего (см. п.2).
+
+    public static int[] lowestAvgList(int[] arr, int avg) {
+        int arrCounter = 0;
         for (int number : arr) {
             if (number < avg) {
-                res.add(number);
+                arrCounter++;
+            }
+        }
+        int[] res = new int[arrCounter];
+        arrCounter = 0;
+        for (int number : arr) {
+            if (number < avg) {
+                res[arrCounter] = number;
+                arrCounter++;
             }
         }
         return res;
     }
-
-    //    количество месяцев, в которых продажи были выше среднего (см. п.2).
-    public static ArrayList<Integer> highestAvgList(int[] arr, int avg) {
-        ArrayList<Integer> res = new ArrayList<>();
+    public static int[] highestAvgList(int[] arr, int avg) {
+        int arrCounter = 0;
         for (int number : arr) {
             if (number > avg) {
-                res.add(number);
+                arrCounter++;
+            }
+        }
+        int[] res = new int[arrCounter];
+        arrCounter = 0;
+        for (int number : arr) {
+            if (number > avg) {
+                res[arrCounter] = number;
+                arrCounter++;
             }
         }
         return res;

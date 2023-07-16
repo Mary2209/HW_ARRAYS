@@ -19,9 +19,9 @@ public class Main {
         System.out.println(lowest);
 
         ArrayList<Integer> lowestAvgList = StatsService.lowestAvgList(sales, avg);
-        System.out.println(lowestAvgList.toString());
+        System.out.println(lowestAvgList);
 
         ArrayList<Integer> highestAvgList = StatsService.highestAvgList(sales, avg);
-        System.out.println(highestAvgList.toString());
+        System.out.println(highestAvgList);
     }
 }

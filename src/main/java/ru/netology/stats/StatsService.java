@@ -1,14 +1,13 @@
 package ru.netology.stats;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class StatsService {
     //    сумму всех продаж;
     public static int sum(int[] arr) {
-        int sum =0;
-        for (int i = 0; i < arr.length; i++) {
-            sum += arr[i];
+        int sum = 0;
+        for (int j : arr) {
+            sum += j;
         }
         return sum;
     }
@@ -42,10 +41,10 @@ public class StatsService {
 
     //    количество месяцев, в которых продажи были ниже среднего (см. п.2);
     public static ArrayList<Integer> lowestAvgList(int[] arr, int avg) {
-        ArrayList<Integer> res = new ArrayList<Integer>();
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] < avg) {
-                res.add(arr[i]);
+        ArrayList<Integer> res = new ArrayList<>();
+        for (int j : arr) {
+            if (j < avg) {
+                res.add(j);
             }
         }
         return res;
@@ -53,10 +52,10 @@ public class StatsService {
 
     //    количество месяцев, в которых продажи были выше среднего (см. п.2).
     public static ArrayList<Integer> highestAvgList(int[] arr, int avg) {
-        ArrayList<Integer> res = new ArrayList<Integer>();
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > avg) {
-                res.add(arr[i]);
+        ArrayList<Integer> res = new ArrayList<>();
+        for (int j : arr) {
+            if (j > avg) {
+                res.add(j);
             }
         }
         return res;

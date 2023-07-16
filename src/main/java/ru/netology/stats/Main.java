@@ -9,7 +9,7 @@ public class Main {
         int sum = StatsService.sum(sales);
         System.out.println(sum);
 
-        int avg = StatsService.avg(sales);
+        int avg = StatsService.avg(sales, sum);
         System.out.println(avg);
 
         int highest = StatsService.highest(sales);

@@ -8,7 +8,7 @@ public class StatsServiceTest {
 
     @Test
     public void testSum() {
-        int[] arr = {1,1,1,1,1};
+        int[] arr = {1, 1, 1, 1, 1};
         int result = StatsService.sum(arr);
         int expected = 5;
 
@@ -17,8 +17,9 @@ public class StatsServiceTest {
 
     @Test
     public void testAvg() {
-        int[] arr = {1,1,1,1,1};
-        int result = StatsService.avg(arr);
+        int[] arr = {1, 1, 1, 1, 1};
+        int sum = StatsService.sum(arr);
+        int result = StatsService.avg(arr, sum);
         int expected = 1;
 
         Assertions.assertEquals(expected, result);
@@ -26,7 +27,7 @@ public class StatsServiceTest {
 
     @Test
     public void testHighest() {
-        int[] arr = {1,1,2,1,1};
+        int[] arr = {1, 1, 2, 1, 1};
         int result = StatsService.highest(arr);
         int expected = 3;
 
@@ -35,7 +36,7 @@ public class StatsServiceTest {
 
     @Test
     public void testLowest() {
-        int[] arr = {1,2,3,4,5};
+        int[] arr = {1, 2, 3, 4, 5};
         int result = StatsService.lowest(arr);
         int expected = 1;
 
@@ -44,7 +45,7 @@ public class StatsServiceTest {
 
     @Test
     public void testLowestAvgList() {
-        int[] arr = {1,2,3,4,5};
+        int[] arr = {1, 2, 3, 4, 5};
         ArrayList<Integer> result = StatsService.lowestAvgList(arr, 3);
         ArrayList<Integer> expected = new ArrayList<>();
         expected.add(1);
@@ -55,7 +56,7 @@ public class StatsServiceTest {
 
     @Test
     public void testHighestAvgList() {
-        int[] arr = {1,2,3,4,5};
+        int[] arr = {1, 2, 3, 4, 5};
         ArrayList<Integer> result = StatsService.highestAvgList(arr, 3);
         ArrayList<Integer> expected = new ArrayList<>();
         expected.add(4);

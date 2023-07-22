@@ -9,7 +9,7 @@ public class Main {
         int sum = StatsService.sum(sales);
         System.out.println(sum);
 
-        int avg = StatsService.avg(sales, sum);
+        int avg = StatsService.avg(sales);
         System.out.println(avg);
 
         int highest = StatsService.highest(sales);
@@ -18,10 +18,10 @@ public class Main {
         int lowest = StatsService.lowest(sales);
         System.out.println(lowest);
 
-        int[] lowestAvgList = StatsService.lowestAvgList(sales, avg);
+        int[] lowestAvgList = StatsService.lowestAvgList(sales);
         System.out.println(Arrays.toString(lowestAvgList));
 
-        int[] highestAvgList = StatsService.highestAvgList(sales, avg);
+        int[] highestAvgList = StatsService.highestAvgList(sales);
         System.out.println(Arrays.toString(highestAvgList));
     }
 }

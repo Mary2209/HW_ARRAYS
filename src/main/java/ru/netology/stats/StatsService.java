@@ -13,7 +13,8 @@ public class StatsService {
     }
 
     //    среднюю сумму продаж в месяц;
-    public static int avg(int[] arr, int sum) {
+    public static int avg(int[] arr) {
+        int sum = sum(arr);
         return sum / arr.length;
     }
 
@@ -40,9 +41,9 @@ public class StatsService {
     }
 
     //    количество месяцев, в которых продажи были ниже среднего (см. п.2);
-    //    количество месяцев, в которых продажи были выше среднего (см. п.2).
 
-    public static int[] lowestAvgList(int[] arr, int avg) {
+    public static int[] lowestAvgList(int[] arr) {
+        int avg = avg(arr);
         int arrCounter = 0;
         for (int number : arr) {
             if (number < avg) {
@@ -59,7 +60,10 @@ public class StatsService {
         }
         return res;
     }
-    public static int[] highestAvgList(int[] arr, int avg) {
+
+    //    количество месяцев, в которых продажи были выше среднего (см. п.2).
+    public static int[] highestAvgList(int[] arr) {
+        int avg = avg(arr);
         int arrCounter = 0;
         for (int number : arr) {
             if (number > avg) {
